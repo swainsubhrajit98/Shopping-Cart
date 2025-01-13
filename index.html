@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <!-- REPLACE THIS WITH YOUR PROJECT NAME. EXAMPLE - Category tabs -->
+    <title>My Shopping Cart</title>
+
+</head>
+
+<body>
+    <!-- Your code goes here -->
+
+    <!-- Happy coding 😊 -->
+
+    <header>
+     
+        <div class="header-container">
+            <div class="menu-container">
+                <button class="menu-button" onclick="toggleMenu()"><img src="/asset/menu.png"></button>
+                <ul class="menu" id="menu">
+                  <li class="menu-item">Home</li>
+                  <li class="menu-item">About</li>
+                  <li class="menu-item">Services</li>
+                  <li class="menu-item">Contact</li>
+                </ul>
+              </div>
+            <div class="logo-section">
+                <img src="./asset/logo.png" class="logo" alt="Logo">
+                <div class="logo-text">Marmeto</div>
+            </div>
+
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#" class="cart-icon">Contact</a>
+            </nav>
+            <div class="icons-section">
+                <a href="#" class="icon search-icon" title="Search">
+                    <img src="./asset/search-icon.png" alt="Search Icon">
+                </a>
+                <a href="#" class="icon heart-icon" title="Wishlist">
+                    <img src="./asset/heart-icon.png" alt="Heart Icon">
+                </a>
+                <a href="#" class="icon cart-icon" title="Cart">
+                    <img src="./asset/cart-icon.png" alt="Cart Icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- home cart section  -->
+    <section>
+        <div class="hero">
+            <div class="hero-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="./asset/logo.png" alt="Logo" />
+                </div>
+
+                <!-- Hero content -->
+                <div class="hero-content">
+                    <h1>Cart</h1>
+                </div>
+
+                <!-- Breadcrumb -->
+                <div class="breadcrumb">
+                    <p><span>Home ></span> Cart</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- cart section  -->
+        <div class="cart-container">
+            <div class="product-container">
+                <table>
+                    <tr>
+                        <th class="small-th"></th>
+                        <th class="responsive-head" >Product</th>
+                        <th class="responsive-head" >Price</th>
+                        <th style="width: 10%;">Quantity</th>
+                        <th class="responsive-head" >Subtotal</th>
+                        <th class="small-th"></th>
+                    </tr>
+                    <tr id="cart-items">
+                        <td><img id="itemImage"></td>
+                        <td id="itemTitle"></td>
+                        <td id="itemPrice"></td>
+                        <td> <input id="itemQuantity" type="text" onkeyup="updatePrice(event)"
+                                oninput="validateNumber(this)"></td>
+                        <td id="itemSubtotal"></td>
+                        <td><button onClick="removeQuantity()"><img src="/asset/trash.png" alt="" width="40"></button>
+                        </td>
+
+                    </tr>
+                </table>
+            </div>
+            <div class="checkout-container">
+                <div class="container-child">
+                    <h2>Cart Totals</h2>
+                    <div style="text-align: start;font-weight:bold">
+                        <p>Subtotal <span id="subtotal">₹0</span></p>
+                        <p>Total <span id="total">₹0</span></p>
+                    </div>
+
+                    <button>Check Out</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- footer section  -->
+    <footer class="footer">
+        <div class="footer-item">
+            <img src="./asset/trophy.png" alt="High Quality" class="footer-image">
+            <div class="footer-text">
+                <p class="footer-title">High Quality</p>
+                <p class="footer-description">crafted from top materials</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="./asset/warenty.png" alt="Warranty Protection" class="footer-image">
+            <div class="footer-text">
+                <p class="footer-title">Warranty Protection</p>
+                <p class="footer-description">Over 2 years</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="./asset/shipping.png" alt="Free Shipping" class="footer-image">
+            <div class="footer-text">
+                <p class="footer-title">Free Shipping</p>
+                <p class="footer-description">Order over 150 $</p>
+            </div>
+        </div>
+        <div class="footer-item">
+            <img src="./asset/customer-service.png" alt="24/7 Support" class="footer-image">
+            <div class="footer-text">
+                <p class="footer-title">24/7 Support</p>
+                <p class="footer-description">Dedicated support</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
